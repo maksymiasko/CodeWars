@@ -1,6 +1,4 @@
 
-a
-1src/test/java/maxIaskoTest/DoubleIntegerTest.java,d\e\dee622e77ca6b71f1b9254a66eb72d579205a498
 d
 4src/test/java/maxIaskoTest/OppositesAttractTest.java,6\7\67a5fc5590b6b7e4f9b30d0ab539301b8bc240eb
 b
