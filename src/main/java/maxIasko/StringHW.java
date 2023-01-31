@@ -91,8 +91,7 @@ public class StringHW {
         StringBuilder builder = new StringBuilder();
         if (!s.isEmpty() && repeat > 0) {
             for (int i = 1; i < repeat; i++) {
-                builder.append(s).
-                        append(", ");
+                builder.append(s).append(", ");
             }
 
             return builder.append(s).toString();
