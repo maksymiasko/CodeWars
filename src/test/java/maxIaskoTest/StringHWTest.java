@@ -17,6 +17,9 @@ public class StringHWTest {
     public static final String EXPECTED_STRING1 = "ABcd";
     public static final String EXPECTED_STRING2 = "      A B c d  ";
     public static final String EXPECTED_STRING3 = "1 2 3 4 5 10      ";
+    public static final String EXPECTED_ABC_STRING = "abc";
+    public static final int EXPECTED_LENGTH = 19;
+    public static final String EXPECTED_ABC_REPEAT_STRING = "abc, abc, abc, abc, abc";
 
     @Test
     public void stringToNumbersTest1() {
@@ -55,5 +58,13 @@ public class StringHWTest {
         Assert.assertTrue(StringHW.stringToNumbersAndSpaces(TEST_EMPTY_STRING).contentEquals(TEST_EMPTY_STRING));
         Assert.assertTrue(StringHW.stringToNumbersAndSpaces(TEST_SPACE_STRING).contentEquals(TEST_SPACE_STRING));
         Assert.assertTrue(StringHW.stringToNumbersAndSpaces(EXPECTED_STRING3).contentEquals(EXPECTED_STRING3));
+    }
+
+    @Test
+    public void stringNTimesTest() {
+        Assert.assertEquals(EXPECTED_LENGTH, StringHW.stringNTimes(EXPECTED_ABC_STRING, 5)
+                .trim().replace(TEST_SPACE_STRING, TEST_EMPTY_STRING).length());
+        Assert.assertEquals(EXPECTED_ABC_REPEAT_STRING, StringHW.stringNTimes(EXPECTED_ABC_STRING, 5));
+        Assert.assertEquals(TEST_EMPTY_STRING, StringHW.stringNTimes(TEST_EMPTY_STRING, 5));
     }
 }
