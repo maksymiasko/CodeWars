@@ -84,7 +84,22 @@ public class StringHW {
 
         return "";
     }
-}
 
+    //    3. Write a method that returns string argument n times separated by comma,
+    //    and number of characters in new string “abc”, 5 → “abc, abc, abc, abc, abc”, 19
+    public static String stringNTimes(String s, int repeat) {
+        StringBuilder builder = new StringBuilder();
+        if (!s.isEmpty() && repeat > 0) {
+            for (int i = 1; i < repeat; i++) {
+                builder.append(s).
+                        append(", ");
+            }
+
+            return builder.append(s).toString();
+        }
+
+        return "";
+    }
+}
 
 
