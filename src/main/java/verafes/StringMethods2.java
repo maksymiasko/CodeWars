@@ -46,4 +46,50 @@ public class StringMethods2 {
         return numArr;
     }
 
+    /* 2. Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers, StringToNumbersAndSpaces
+     * следуя примеру на сайте: https://allcalc.ru/node/2030
+     * Каждый алгоритм принимает строку,  и удаляет ненужные символы:  */
+
+    // 2.1. algorithm for filtering letters only in string
+    public String StringToLetters (String str) {
+
+        if (!str.isEmpty()) {
+
+            return str.replaceAll("[^a-zA-Z]", "");
+        }
+
+        return "String is empty";
+    }
+
+    // 2.2. algorithm for filtering letters and spaces in string
+    public String StringToLettersWithSpaces (String str) {
+
+        if (!str.isEmpty()) {
+
+            return str.replaceAll("[^a-zA-Z ]", "");
+        }
+
+        return "String is empty or blank";
+    }
+
+    // 2.3. algorithm for filtering numbers only in string
+    public String StringToNumbers (String str) {
+
+        if (!str.isEmpty()) {
+            return str.replaceAll("[^\\d]", "");
+        }
+
+        return "String is empty or blank";
+    }
+
+    // 2.4. algorithm for filtering numbers and spaces in string
+    public String StringToNumbersWithSpaces (String str) {
+
+        if (!str.isEmpty()) {
+
+            return str.replaceAll("[^0-9 ]", "");
+        }
+
+        return "String is empty";
+    }
 }
