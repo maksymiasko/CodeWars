@@ -24,6 +24,7 @@ public class StringHWTest {
     public static final String TEST_STRING5 = "1.1";
     public static final String TEST_STRING6 = "a";
     public static final String TEST_STRING7 = "0123456789";
+    public static final String EXPECTED_STRING4 = "AAAA";
 
     @Test
     public void stringToNumbersTest1() {
@@ -80,5 +81,14 @@ public class StringHWTest {
         Assert.assertFalse(StringHW.isNaturalNumber(TEST_STRING5));
         Assert.assertFalse(StringHW.isNaturalNumber(TEST_STRING6));
         Assert.assertFalse(StringHW.isNaturalNumber(TEST_STRING7));
+    }
+
+    @Test
+    public void repeatCharactersTest() {
+        Assert.assertTrue(StringHW.repeatCharacters(TEST_EMPTY_STRING).contentEquals(TEST_EMPTY_STRING));
+        Assert.assertTrue(StringHW.repeatCharacters(TEST_STRING1).contentEquals(EXPECTED_STRING4));
+        Assert.assertTrue(StringHW.repeatCharacters(TEST_STRING7).contentEquals(TEST_EMPTY_STRING));
+        Assert.assertTrue(StringHW.repeatCharacters(EXPECTED_ABC_REPEAT_STRING)
+                .contentEquals(EXPECTED_ABC_STRING + EXPECTED_ABC_STRING));
     }
 }
