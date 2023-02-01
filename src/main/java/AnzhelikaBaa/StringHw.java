@@ -5,6 +5,7 @@ public class StringHw {
      * 10.1 Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
      * Test Data: “1, 2, 3, 4, 5” → {1, 2, 3, 4, 5} (Без форматирования и с форматированием)
      */
+
     public static int[] stringToNumbers(String a) {
 
         String[] stringArray = a.split(", ");
