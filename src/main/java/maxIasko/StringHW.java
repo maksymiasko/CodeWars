@@ -99,6 +99,16 @@ public class StringHW {
 
         return "";
     }
+
+    //   4.Find if the passed string is a natural number “1” → true “1.1” → false “a” → false "0123456789" → false
+    public static boolean isNaturalNumber(String s) {
+        if (s.trim().length() == 1) {
+
+            return Character.isDigit(s.charAt(0));
+        }
+
+        return false;
+    }
 }
 
 
