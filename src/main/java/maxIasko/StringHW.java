@@ -109,6 +109,24 @@ public class StringHW {
 
         return false;
     }
+
+    //   5.	Write a method that takes a string and returns a string made of the last 3 characters
+    //   and the first 3 characters of the passed string, if the argument string is longer than 5 characters
+    //   or the method returns a string containing the first char repeated number of chars times
+    public static String repeatCharacters(String s) {
+        String s1 = stringToLetters(s);
+        StringBuilder builder = new StringBuilder();
+        if (!s.isEmpty() && s1.length() > 0) {
+            if (s1.length() <= 6) {
+
+                return builder.append(String.valueOf(s1.charAt(0)).repeat(s1.length())).toString();
+            }
+
+            return s1.substring(0, 3).concat(s1.substring(s1.length() - 3));
+        }
+
+        return "";
+    }
 }
 
 
