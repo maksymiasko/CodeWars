@@ -20,6 +20,10 @@ public class StringHWTest {
     public static final String EXPECTED_ABC_STRING = "abc";
     public static final int EXPECTED_LENGTH = 19;
     public static final String EXPECTED_ABC_REPEAT_STRING = "abc, abc, abc, abc, abc";
+    public static final String TEST_STRING4 = "1";
+    public static final String TEST_STRING5 = "1.1";
+    public static final String TEST_STRING6 = "a";
+    public static final String TEST_STRING7 = "0123456789";
 
     @Test
     public void stringToNumbersTest1() {
@@ -66,5 +70,15 @@ public class StringHWTest {
                 .trim().replace(TEST_SPACE_STRING, TEST_EMPTY_STRING).length());
         Assert.assertEquals(EXPECTED_ABC_REPEAT_STRING, StringHW.stringNTimes(EXPECTED_ABC_STRING, 5));
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.stringNTimes(TEST_EMPTY_STRING, 5));
+    }
+
+    @Test
+    public void isNaturalNumberTest() {
+        Assert.assertFalse(StringHW.isNaturalNumber(TEST_EMPTY_STRING));
+        Assert.assertFalse(StringHW.isNaturalNumber(TEST_SPACE_STRING));
+        Assert.assertTrue(StringHW.isNaturalNumber(TEST_STRING4));
+        Assert.assertFalse(StringHW.isNaturalNumber(TEST_STRING5));
+        Assert.assertFalse(StringHW.isNaturalNumber(TEST_STRING6));
+        Assert.assertFalse(StringHW.isNaturalNumber(TEST_STRING7));
     }
 }
