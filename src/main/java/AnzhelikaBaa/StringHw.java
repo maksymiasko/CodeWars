@@ -34,4 +34,48 @@ public class StringHw {
 
         return numArr;
     }
+
+    /** 2.
+     * Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers,
+     * StringToNumbersAndSpaces следуя примеру на сайте: https://allcalc.ru/node/2030
+     * Каждый алгоритм принимает строку,  и удаляет ненужные символы:
+     */
+
+    public static String StringToLetters(String str) {
+        char[] charArray = str.toCharArray();
+        StringBuilder builder = new StringBuilder();
+
+        if (!str.trim().isEmpty()) {
+            for (int i = 0; i < charArray.length; i++) {
+                char ch = charArray[i];
+                if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z')) {
+                    builder.append(ch);
+                }
+            }
+
+            return builder.toString();
+        }
+
+        return "";
+    }
+
+    public static String StringToLettersAndSpaces(String str) {
+        char[] charArray = str.toCharArray();
+        StringBuilder builder = new StringBuilder();
+
+        if (!str.isEmpty()) {
+            for (int i = 0; i < charArray.length; i++) {
+                char ch = charArray[i];
+                if ((Character.isLetter(str.charAt(i))) || (str.charAt(i) == ' ')) {
+                    builder.append(ch);
+                }
+            }
+
+            return builder.toString();
+        }
+
+        return "";
+    }
 }
+
+

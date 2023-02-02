@@ -68,4 +68,57 @@ public class StringHwTest {
 
         Assert.assertEquals(actualResult, expectedResult);
     }
+
+    /** /** Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers,
+     * StringToNumbersAndSpaces*/
+
+    @Test
+    public void test_StringToLetters_HappyPath() {
+        String str = "ghjkjhgjkRTYUTRYTR567865678@@@)))";
+        String expectedResult = "ghjkjhgjkRTYUTRYTR";
+
+        String actualResult = new StringHw().StringToLetters(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void test_emptyString_HappyPath() {
+        String str = "";
+        String expectedResult = "";
+
+        String actualResult = new StringHw().StringToLetters(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void test_stringWithNoLetters_HappyPath() {
+        String str = "1232123&*()*&";
+        String expectedResult = "";
+
+        String actualResult = new StringHw().StringToLetters(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void test_getLettersWithSpaces_HappyPath() {
+        String str = "dfgh 12&A B";
+        String expectedResult = "dfgh A B";
+
+        String actualResult = new StringHw().StringToLettersAndSpaces(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void test_emptyString2_HappyPath() {
+        String str = "";
+        String expectedResult = "";
+
+        String actualResult = new StringHw().StringToLettersAndSpaces(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
 }
