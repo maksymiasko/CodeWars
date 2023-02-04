@@ -1,6 +1,6 @@
-package AnzhelikaBaaTest;
+package anzhelikaBaaTest;
 
-import AnzhelikaBaa.StringHw;
+import anzhelikaBaa.StringHw;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,6 +16,7 @@ public class StringHwTest {
     }
 
     @Test
+
     public void test_StringOfNumbersToArray2_HappyPath() {
         String a = "1, 2, 3, 4, 5";
         int[] expectedResult = {1, 2, 3, 4, 5};
@@ -69,7 +70,7 @@ public class StringHwTest {
         Assert.assertEquals(actualResult, expectedResult);
     }
 
-    /** /** Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers,
+     /** 2. Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers,
      * StringToNumbersAndSpaces*/
 
     @Test
@@ -121,4 +122,47 @@ public class StringHwTest {
 
         Assert.assertEquals(actualResult, expectedResult);
     }
-}
+    /** 2.3 */
+    @Test
+    public void test_StringToNumbers_HappyPath() {
+        String str = "Date of birth : 1957";
+        String expectedResult = "1957";
+
+        String actualResult = new StringHw().StringToNumbers(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void test_StringToNumbers_whenNoNumbersPresent_HappyPath() {
+        String str = "A QA Engineer is a professional who finds and fixes bugs in a product or program" +
+                " before its launch, collaborating with developers on fixes to those problems when necessary.";
+        String expectedResult = "";
+
+        String actualResult = new StringHw().StringToNumbers(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void test_StringToNumbersAndSpaces_HappyPath() {
+        String str = "Posted on: September 8, 2022";
+        String expectedResult = "   8 2022";
+
+        String actualResult = new StringHw().StringToNumbersAndSpaces(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void test_emptyString_Negative() {
+        String str = "";
+        String expectedResult = "";
+
+        String actualResult = new StringHw().StringToNumbersAndSpaces(str);
+
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+    /**   10.3 Write a method that returns string argument n times separated by comma,
+     and number of characters in new string    “abc”, 5 → “abc, abc, abc, abc, abc”, 19   */
+    }
