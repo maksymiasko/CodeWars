@@ -133,7 +133,7 @@ public class StringHW {
     public static String isEven(int[] digitArray) {
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < digitArray.length; i++) {
-            if (digitArray[i] % 2 == 0) {
+            if (digitArray[i] % 2 != 0) {
                 builder.append(digitArray[i]);
             }
         }
@@ -157,7 +157,7 @@ public class StringHW {
 
         if (n.length >= 5 && d.length >= 5) {
             for (int i = 0; i < 5; i++) {
-                builder.append(d[i]).append(n[i]);
+                builder.append(n[i]).append(d[i]);
             }
 
             return builder.toString();
