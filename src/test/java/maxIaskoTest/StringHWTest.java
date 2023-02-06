@@ -96,6 +96,7 @@ public class StringHWTest {
     @Test
     public void digitsAndLettersTest() {
         Assert.assertEquals(TEST_STRING10, StringHW.digitsAndLetters(TEST_STRING8, TEST_STRING9));
+        Assert.assertEquals(10, StringHW.digitsAndLetters(TEST_STRING8, TEST_STRING9).length());
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING, TEST_STRING9));
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING7, EXPECTED_ABC_REPEAT_STRING));
     }
