@@ -27,7 +27,7 @@ public class StringHWTest {
     public static final String EXPECTED_STRING4 = "AAAA";
     public static final String TEST_STRING8 = "3, 2, 3, 4, 5, 6, 7, 8, 9, 1, 8, 2, 1";
     public static final String TEST_STRING9 = "B, c, D, A, a, J, k, i, D, F, e, r, Z";
-    public static final String TEST_STRING10 = "A2B2D4D6F8";
+    public static final String TEST_STRING10 = "1A1B3D3D5F";
 
     @Test
     public void stringToNumbersTest1() {
