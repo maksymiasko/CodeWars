@@ -1,5 +1,7 @@
 package maxIasko;
 
+import java.util.Arrays;
+
 import static java.lang.Character.isDigit;
 
 public class StringHW {
@@ -123,6 +125,42 @@ public class StringHW {
             }
 
             return s1.substring(0, 3).concat(s1.substring(s1.length() - 3));
+        }
+
+        return "";
+    }
+
+    public static String isEven(int[] digitArray) {
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < digitArray.length; i++) {
+            if (digitArray[i] % 2 == 0) {
+                builder.append(digitArray[i]);
+            }
+        }
+
+        return builder.toString();
+    }
+
+    //   6.	A method should return a string with a length of 10, on even indexes should
+    //   be even digits (ascending order) on odd indexes should be letters (ascending order)
+    public static String digitsAndLetters(String digit, String letter) {
+        if (digit == null || digit.length() == 0 || letter == null || letter.length() == 0) return "";
+
+        StringBuilder builder = new StringBuilder();
+
+        char[] d = stringToLetters(letter).toCharArray();
+        Arrays.sort(d);
+
+        int[] n = (stringToNumbers1(digit));
+        Arrays.sort(n);
+        n = stringToNumbers2(isEven(n));
+
+        if (n.length >= 5 && d.length >= 5) {
+            for (int i = 0; i < 5; i++) {
+                builder.append(d[i]).append(n[i]);
+            }
+
+            return builder.toString();
         }
 
         return "";
