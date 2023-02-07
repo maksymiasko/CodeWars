@@ -1,10 +1,13 @@
 package maxIasko;
 
 import java.util.Arrays;
+import java.util.function.IntUnaryOperator;
 
 import static java.lang.Character.isDigit;
 
 public class StringHW {
+
+    private static IntUnaryOperator getName;
 
     // 1. Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
     // Test Data:“1, 2, 3, 4, 5” → {1, 2, 3, 4, 5}(Без форматирования и с форматированием)
@@ -29,6 +32,7 @@ public class StringHW {
                 .map(Character::getNumericValue)
                 .toArray();
     }
+
 
     //    2. Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers, StringToNumbersAndSpaces
     //    следуя примеру на сайте: https://allcalc.ru/node/2030
@@ -130,40 +134,35 @@ public class StringHW {
         return "";
     }
 
-    public static String isEven(int[] digitArray) {
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < digitArray.length; i++) {
-            if (digitArray[i] % 2 != 0) {
-                builder.append(digitArray[i]);
-            }
-        }
-
-        return builder.toString();
-    }
-
-    //   6.	A method should return a string with a length of 10, on even indexes should
-    //   be even digits (ascending order) on odd indexes should be letters (ascending order)
-    public static String digitsAndLetters(String digit, String letter) {
-        if (digit == null || digit.length() == 0 || letter == null || letter.length() == 0) return "";
+    //  6. A method should return a string with a length of 10, on even indexes should be even digits
+    //  (ascending order)on odd indexes should be letters (ascending order)
+    public static String digitsAndLetters(String s) {
+        if (s == null || s.length() == 0) return "";
+        char[] digit = sortString(s.replaceAll("[^13579]", ""));
+        char[] letter = sortString(s.replaceAll("[^A-Za-zА-Яа-я]", ""));
 
         StringBuilder builder = new StringBuilder();
 
-        char[] d = stringToLetters(letter).toCharArray();
-        Arrays.sort(d);
-
-        int[] n = (stringToNumbers1(digit));
-        Arrays.sort(n);
-        n = stringToNumbers2(isEven(n));
-
-        if (n.length >= 5 && d.length >= 5) {
+        if (digit.length >= 5 && letter.length >= 5) {
             for (int i = 0; i < 5; i++) {
-                builder.append(n[i]).append(d[i]);
+                builder.append(digit[i]).append(letter[i]);
             }
 
             return builder.toString();
         }
 
         return "";
+    }
+
+    public static char[] sortString(String inputString) {
+        char[] tempArray = inputString.toCharArray();
+        Arrays.sort(tempArray);
+        return tempArray;
+    }
+
+    public static int codeMessage(int message, int mask) {
+
+        return message ^ mask;
     }
 }
 
