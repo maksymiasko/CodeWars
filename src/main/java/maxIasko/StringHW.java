@@ -146,6 +146,7 @@ public class StringHW {
 
         if (d.length >= 5 && l.length >= 5) {
             for (int i = 0; i < 5; i++) {
+
                 builder.append(d[i]).append(l[i]);
             }
 
