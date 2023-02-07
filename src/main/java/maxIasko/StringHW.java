@@ -137,15 +137,16 @@ public class StringHW {
     //  6. A method should return a string with a length of 10, on even indexes should be even digits
     //  (ascending order)on odd indexes should be letters (ascending order)
     public static String digitsAndLetters(String s) {
-        if (s == null || s.length() == 0) return "";
-        char[] digit = sortString(s.replaceAll("[^13579]", ""));
-        char[] letter = sortString(s.replaceAll("[^A-Za-zА-Яа-я]", ""));
 
+        if (s == null || s.length() == 0) return "";
+
+        char[] d = sortString(s.replaceAll("[^13579]", ""));
+        char[] l = sortString(s.replaceAll("[^A-Za-zА-Яа-я]", ""));
         StringBuilder builder = new StringBuilder();
 
-        if (digit.length >= 5 && letter.length >= 5) {
+        if (d.length >= 5 && l.length >= 5) {
             for (int i = 0; i < 5; i++) {
-                builder.append(digit[i]).append(letter[i]);
+                builder.append(d[i]).append(l[i]);
             }
 
             return builder.toString();
@@ -154,10 +155,11 @@ public class StringHW {
         return "";
     }
 
-    public static char[] sortString(String inputString) {
-        char[] tempArray = inputString.toCharArray();
-        Arrays.sort(tempArray);
-        return tempArray;
+    public static char[] sortString(String s) {
+        char[] array = s.toCharArray();
+        Arrays.sort(array);
+
+        return array;
     }
 }
 
