@@ -25,9 +25,10 @@ public class StringHWTest {
     public static final String TEST_STRING6 = "a";
     public static final String TEST_STRING7 = "0123456789";
     public static final String EXPECTED_STRING4 = "AAAA";
-    public static final String TEST_STRING8 = "3, 2, 3, 4, 5, 6, 7, 8, 9, 1, 8, 2, 1";
+    public static final String TEST_STRING8 = "3, 2, 3, 4, 5 6, 7 8, 9+  1, 8, 2, 1";
     public static final String TEST_STRING9 = "B, c, D, A, a, J, k, i, D, F, e, r, Z";
-    public static final String TEST_STRING10 = "1A1B3D3D5F";
+    public static final String TEST_STRING10 = "strAing6385795318@%# +_апшгрщсоцслфчПГЛ$%^&*ToNumbers1 ";
+    public static final String TEST_STRING11 = "1A1N3T3b5e";
 
     @Test
     public void stringToNumbersTest1() {
@@ -95,9 +96,10 @@ public class StringHWTest {
 
     @Test
     public void digitsAndLettersTest() {
-        Assert.assertEquals(TEST_STRING10, StringHW.digitsAndLetters(TEST_STRING8, TEST_STRING9));
-        Assert.assertEquals(10, StringHW.digitsAndLetters(TEST_STRING8, TEST_STRING9).length());
-        Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING, TEST_STRING9));
-        Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING7, EXPECTED_ABC_STRING));
+        Assert.assertEquals(TEST_STRING11, StringHW.digitsAndLetters(TEST_STRING10));
+        Assert.assertEquals(10, StringHW.digitsAndLetters(TEST_STRING10).length());
+        Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING8));
+        Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING9));
+        Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_EMPTY_STRING));
     }
 }
