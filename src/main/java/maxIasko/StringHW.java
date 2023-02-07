@@ -1,13 +1,10 @@
 package maxIasko;
 
 import java.util.Arrays;
-import java.util.function.IntUnaryOperator;
 
 import static java.lang.Character.isDigit;
 
 public class StringHW {
-
-    private static IntUnaryOperator getName;
 
     // 1. Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
     // Test Data:“1, 2, 3, 4, 5” → {1, 2, 3, 4, 5}(Без форматирования и с форматированием)
@@ -32,7 +29,6 @@ public class StringHW {
                 .map(Character::getNumericValue)
                 .toArray();
     }
-
 
     //    2. Написать 4 алгоритма StringToLetters, StringToLettersAndSpaces, StringToNumbers, StringToNumbersAndSpaces
     //    следуя примеру на сайте: https://allcalc.ru/node/2030
@@ -146,7 +142,6 @@ public class StringHW {
 
         if (d.length >= 5 && l.length >= 5) {
             for (int i = 0; i < 5; i++) {
-
                 builder.append(d[i]).append(l[i]);
             }
 
