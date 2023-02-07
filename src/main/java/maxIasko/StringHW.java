@@ -133,7 +133,6 @@ public class StringHW {
     //  6. A method should return a string with a length of 10, on even indexes should be even digits
     //  (ascending order)on odd indexes should be letters (ascending order)
     public static String digitsAndLetters(String s) {
-
         if (s == null || s.length() == 0) return "";
 
         char[] d = sortString(s.replaceAll("[^13579]", ""));
