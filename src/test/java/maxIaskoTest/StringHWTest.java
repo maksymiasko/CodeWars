@@ -102,9 +102,4 @@ public class StringHWTest {
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING9));
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_EMPTY_STRING));
     }
-
-    @Test
-    public void codeMassageTest() {
-        System.out.println(StringHW.codeMessage(StringHW.codeMessage(560, 720), 720));
-    }
 }

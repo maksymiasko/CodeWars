@@ -159,11 +159,6 @@ public class StringHW {
         Arrays.sort(tempArray);
         return tempArray;
     }
-
-    public static int codeMessage(int message, int mask) {
-
-        return message ^ mask;
-    }
 }
 
 
