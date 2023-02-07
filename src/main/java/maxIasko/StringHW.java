@@ -136,7 +136,7 @@ public class StringHW {
         if (s == null || s.length() == 0) return "";
 
         char[] d = sortString(s.replaceAll("[^13579]", ""));
-        char[] l = sortString(s.replaceAll("[^A-Za-zА-Яа-я]", ""));
+        char[] l = sortString(s.replaceAll("[^A-Za-zА-Яа-яА-Яа-я]", ""));
         StringBuilder builder = new StringBuilder();
 
         if (d.length >= 5 && l.length >= 5) {
@@ -156,6 +156,11 @@ public class StringHW {
 
         return array;
     }
+
+    //  7.  Написать метод, который принимает строку и натуральное число, меньше 10,
+    //  и возвращает порядковые номера (не индексы!) цифр, совпадающих с числом-параметром.
+    //  “23, 45 2 1 567, а, 3 4 : 78”, 4 → 5, 22
+
 }
 
 
