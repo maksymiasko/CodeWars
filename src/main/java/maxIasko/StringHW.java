@@ -1,13 +1,10 @@
 package maxIasko;
 
 import java.util.Arrays;
-import java.util.function.IntUnaryOperator;
 
 import static java.lang.Character.isDigit;
 
 public class StringHW {
-
-    private static IntUnaryOperator getName;
 
     // 1. Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
     // Test Data:“1, 2, 3, 4, 5” → {1, 2, 3, 4, 5}(Без форматирования и с форматированием)
@@ -137,16 +134,14 @@ public class StringHW {
     //  6. A method should return a string with a length of 10, on even indexes should be even digits
     //  (ascending order)on odd indexes should be letters (ascending order)
     public static String digitsAndLetters(String s) {
-
         if (s == null || s.length() == 0) return "";
 
         char[] d = sortString(s.replaceAll("[^13579]", ""));
-        char[] l = sortString(s.replaceAll("[^A-Za-zА-Яа-я]", ""));
+        char[] l = sortString(s.replaceAll("[^A-Za-zА-Яа-яА-Яа-я]", ""));
         StringBuilder builder = new StringBuilder();
 
         if (d.length >= 5 && l.length >= 5) {
             for (int i = 0; i < 5; i++) {
-
                 builder.append(d[i]).append(l[i]);
             }
 
@@ -162,6 +157,11 @@ public class StringHW {
 
         return array;
     }
+
+    //  7.  Написать метод, который принимает строку и натуральное число, меньше 10,
+    //  и возвращает порядковые номера (не индексы!) цифр, совпадающих с числом-параметром.
+    //  “23, 45 2 1 567, а, 3 4 : 78”, 4 → 5, 22
+
 }
 
 
