@@ -10,6 +10,7 @@ public class StringHWTest {
 
     public static final String TEST_STRING = "1, 2, 3, 4, 5";
     public static final String TEST_STRING1 = "1, 2, 3, 4, 5, 10, A, B, c, d, +, ";
+    public static final String TEST_STRING2 = "23, 45 2 1 567, а, 3 4 : 78";
     public static final String TEST_EMPTY_STRING = "";
     public static final String TEST_SPACE_STRING = " ";
     public static final int[] EXPECTED_ARRAY = {1, 2, 3, 4, 5};
@@ -101,5 +102,13 @@ public class StringHWTest {
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING8));
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_STRING9));
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.digitsAndLetters(TEST_EMPTY_STRING));
+    }
+
+    @Test
+    public void integerLocationTest() {
+        Assert.assertEquals(StringHW.integerLocation(TEST_STRING2, 4), 22);
+        Assert.assertEquals(StringHW.integerLocation(TEST_STRING, 4), 10);
+        Assert.assertEquals(StringHW.integerLocation(EXPECTED_STRING3, 3), 5);
+        Assert.assertEquals(StringHW.integerLocation(TEST_EMPTY_STRING, 3), -1);
     }
 }
