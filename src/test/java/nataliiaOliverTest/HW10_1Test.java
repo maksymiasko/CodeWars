@@ -1,42 +1,42 @@
 package nataliiaOliverTest;
 
-import nataliiaOliver.StringToNumbers;
+import nataliiaOliver.HW10_1;
 import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class StringToNumbersTest {
+public class HW10_1Test {
 
     @Test
-    public void testStringToNumbersHappyPath() {
+    public void testStringToNumbers_HappyPath() {
 
         String str = "1, 2, 3, 4, 5";
         int[] expectedResult = {1, 2, 3, 4, 5};
 
-        StringToNumbers sn = new StringToNumbers();
+        HW10_1 sn = new HW10_1();
         int[] actualResult = sn.stringToNumbers(str);
 
         Assert.assertArrayEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void testStringToNumbersNull() {
+    public void testStringToNumbers_Null() {
 
         String str = null;
         int[] expectedResult = {};
 
-        StringToNumbers sn = new StringToNumbers();
+        HW10_1 sn = new HW10_1();
         int[] actualResult = sn.stringToNumbers(str);
 
         Assert.assertArrayEquals(expectedResult, actualResult);
     }
 
     @Test
-    public void testStringToNumbersIsEmpty() {
+    public void testStringToNumbers_IsEmpty() {
 
         String str = " ";
         int[] expectedResult = {};
 
-        StringToNumbers sn = new StringToNumbers();
+        HW10_1 sn = new HW10_1();
         int[] actualResult = sn.stringToNumbers(str);
 
         Assert.assertArrayEquals(expectedResult, actualResult);

@@ -1,6 +1,6 @@
 package nataliiaOliver;
 
-public class StringToNumbers {
+public class HW10_1 {
 
     /**
      * Написать алгоритм StringToNumbers, который принимает строку, и возвращает массив чисел:
