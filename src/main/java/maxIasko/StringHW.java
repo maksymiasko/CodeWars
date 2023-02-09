@@ -162,18 +162,17 @@ public class StringHW {
     //  “23, 45 2 1 567, а, 3 4 : 78”, 4 → 5, 22
     public static int integerLocation(String s, int n) {
         if (s == null || s.length() == 0 || n < 0 || n > 10) return -1;
+        char[] charArray = s.toCharArray();
         int result = 0;
-        char[] d = s.toCharArray();
 
-        for (int i = 0; i < d.length; i++) {
-            if (Character.getNumericValue(d[i]) == n) {
+        for (int i = 0; i < charArray.length; i++) {
+            if (Character.getNumericValue(charArray[i]) == n) {
                 result = i + 1;
             }
         }
 
         return result;
     }
-
 }
 
 
