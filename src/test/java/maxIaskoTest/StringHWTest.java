@@ -18,6 +18,8 @@ public class StringHWTest {
     public static final String EXPECTED_STRING1 = "ABcd";
     public static final String EXPECTED_STRING2 = "      A B c d  ";
     public static final String EXPECTED_STRING3 = "1 2 3 4 5 10      ";
+    public static final String EXPECTED_STRING4 = "AAAA";
+    public static final String EXPECTED_STRING5 = "5, 22";
     public static final String EXPECTED_ABC_STRING = "abc";
     public static final int EXPECTED_LENGTH = 19;
     public static final String EXPECTED_ABC_REPEAT_STRING = "abc, abc, abc, abc, abc";
@@ -25,7 +27,6 @@ public class StringHWTest {
     public static final String TEST_STRING5 = "1.1";
     public static final String TEST_STRING6 = "a";
     public static final String TEST_STRING7 = "0123456789";
-    public static final String EXPECTED_STRING4 = "AAAA";
     public static final String TEST_STRING8 = "3, 2, 3, 4, 5 6, 7 8, 9+  1, 8, 2, 1";
     public static final String TEST_STRING9 = "B, c, D, A, a, J, k, i, D, F, e, r, Z";
     public static final String TEST_STRING10 = "єїАыгрщсоцслфчПГЛstrAing6385795318@%# +_апшЇЄ,$%^&*ToNumbers1 ";
@@ -106,9 +107,9 @@ public class StringHWTest {
 
     @Test
     public void integerLocationTest() {
-        Assert.assertEquals(StringHW.integerLocation(TEST_STRING2, 4), 22);
-        Assert.assertEquals(StringHW.integerLocation(TEST_STRING, 4), 10);
-        Assert.assertEquals(StringHW.integerLocation(EXPECTED_STRING3, 3), 5);
-        Assert.assertEquals(StringHW.integerLocation(TEST_EMPTY_STRING, 3), -1);
+        Assert.assertEquals (EXPECTED_STRING5, StringHW.integerLocation(TEST_STRING2, 4));
+        Assert.assertEquals(StringHW.integerLocation(TEST_STRING, 4), Integer.toString(10));
+        Assert.assertEquals(StringHW.integerLocation(EXPECTED_STRING3, 3), Integer.toString(5));
+        Assert.assertEquals(TEST_EMPTY_STRING, StringHW.integerLocation(TEST_EMPTY_STRING, 3));
     }
 }
