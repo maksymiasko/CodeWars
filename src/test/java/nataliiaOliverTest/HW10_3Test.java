@@ -58,8 +58,6 @@ public class HW10_3Test {
 
         String actualResult = new HW10_3().stringRepeatNTimes(str, n);
 
-        System.out.println(actualResult);
-
         Assert.assertEquals(actualResult, expectedResult);
     }
 
@@ -71,8 +69,6 @@ public class HW10_3Test {
         String expectedResult = "";
 
         String actualResult = new HW10_3().stringRepeatNTimes(str, n);
-
-        System.out.println(actualResult);
 
         Assert.assertEquals(actualResult, expectedResult);
     }
@@ -86,8 +82,6 @@ public class HW10_3Test {
 
         String actualResult = new HW10_3().stringRepeatNTimes(str, n);
 
-        System.out.println(actualResult);
-
         Assert.assertEquals(actualResult, expectedResult);
     }
 
@@ -99,8 +93,6 @@ public class HW10_3Test {
         String expectedResult = "";
 
         String actualResult = new HW10_3().stringRepeatNTimes(str, n);
-
-        System.out.println(actualResult);
 
         Assert.assertEquals(actualResult, expectedResult);
     }
