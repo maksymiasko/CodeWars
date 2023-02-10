@@ -15,7 +15,7 @@ public class HW10_1Test {
         HW10_1 sn = new HW10_1();
         int[] actualResult = sn.stringToNumbers(str);
 
-        Assert.assertArrayEquals(expectedResult, actualResult);
+        Assert.assertArrayEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class HW10_1Test {
         HW10_1 sn = new HW10_1();
         int[] actualResult = sn.stringToNumbers(str);
 
-        Assert.assertArrayEquals(expectedResult, actualResult);
+        Assert.assertArrayEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -39,6 +39,6 @@ public class HW10_1Test {
         HW10_1 sn = new HW10_1();
         int[] actualResult = sn.stringToNumbers(str);
 
-        Assert.assertArrayEquals(expectedResult, actualResult);
+        Assert.assertArrayEquals(actualResult, expectedResult);
     }
 }

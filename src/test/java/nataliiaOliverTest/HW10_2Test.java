@@ -19,7 +19,7 @@ public class HW10_2Test {
         HW10_2 sl = new HW10_2();
         String actualResult = sl.StringToLetters(str);
 
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -31,7 +31,7 @@ public class HW10_2Test {
         HW10_2 sl = new HW10_2();
         String actualResult = sl.StringToLetters(str);
 
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -43,7 +43,7 @@ public class HW10_2Test {
         HW10_2 sl = new HW10_2();
         String actualResult = sl.StringToLetters(str);
 
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -68,10 +68,10 @@ public class HW10_2Test {
         String actualResult3 = sl.StringToLetters(str3);
         String actualResult4 = sl.StringToLetters(str4);
 
-        Assert.assertEquals(expectedResult1, actualResult1);
-        Assert.assertEquals(expectedResult2, actualResult2);
-        Assert.assertEquals(expectedResult3, actualResult3);
-        Assert.assertEquals(expectedResult4, actualResult4);
+        Assert.assertEquals(actualResult1, expectedResult1);
+        Assert.assertEquals(actualResult2, expectedResult2);
+        Assert.assertEquals(actualResult3, expectedResult3);
+        Assert.assertEquals(actualResult4, expectedResult4);
     }
 
     /*
@@ -87,7 +87,7 @@ public class HW10_2Test {
         HW10_2 ls = new HW10_2();
         String actualResult = ls.StringToLettersAndSpaces(str);
 
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -99,7 +99,7 @@ public class HW10_2Test {
         HW10_2 ls = new HW10_2();
         String actualResult = ls.StringToLettersAndSpaces(str);
 
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -111,7 +111,7 @@ public class HW10_2Test {
         HW10_2 ls = new HW10_2();
         String actualResult = ls.StringToLettersAndSpaces(str);
 
-        Assert.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
     @Test
@@ -136,10 +136,10 @@ public class HW10_2Test {
         String actualResult3 = ls.StringToLettersAndSpaces(str3);
         String actualResult4 = ls.StringToLettersAndSpaces(str4);
 
-        Assert.assertEquals(expectedResult1, actualResult1);
-        Assert.assertEquals(expectedResult2, actualResult2);
-        Assert.assertEquals(expectedResult3, actualResult3);
-        Assert.assertEquals(expectedResult4, actualResult4);
+        Assert.assertEquals(actualResult1, expectedResult1);
+        Assert.assertEquals(actualResult2, expectedResult2);
+        Assert.assertEquals(actualResult3, expectedResult3);
+        Assert.assertEquals(actualResult4, expectedResult4);
     }
 
     /*
@@ -156,8 +156,8 @@ public class HW10_2Test {
         String actualResult_V1 = sn.StringToNumbers_V1(str);
         String actualResult_V2 = sn.StringToNumbers_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     @Test
@@ -170,8 +170,8 @@ public class HW10_2Test {
         String actualResult_V1 = sn.StringToNumbers_V1(str);
         String actualResult_V2 = sn.StringToNumbers_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     @Test
@@ -184,8 +184,8 @@ public class HW10_2Test {
         String actualResult_V1 = sn.StringToNumbers_V1(str);
         String actualResult_V2 = sn.StringToNumbers_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     @Test
@@ -198,8 +198,8 @@ public class HW10_2Test {
         String actualResult_V1 = sn.StringToNumbers_V1(str);
         String actualResult_V2 = sn.StringToNumbers_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     @Test
@@ -212,8 +212,8 @@ public class HW10_2Test {
         String actualResult_V1 = sn.StringToNumbers_V1(str);
         String actualResult_V2 = sn.StringToNumbers_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     /*
@@ -230,8 +230,8 @@ public class HW10_2Test {
         String actualResult_V1 = ns.StringToNumbersAndSpaces_V1(str);
         String actualResult_V2 = ns.StringToNumbersAndSpaces_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     @Test
@@ -244,8 +244,8 @@ public class HW10_2Test {
         String actualResult_V1 = ns.StringToNumbersAndSpaces_V1(str);
         String actualResult_V2 = ns.StringToNumbersAndSpaces_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     @Test
@@ -258,8 +258,8 @@ public class HW10_2Test {
         String actualResult_V1 = ns.StringToNumbersAndSpaces_V1(str);
         String actualResult_V2 = ns.StringToNumbersAndSpaces_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     @Test
@@ -272,8 +272,8 @@ public class HW10_2Test {
         String actualResult_V1 = ns.StringToNumbersAndSpaces_V1(str);
         String actualResult_V2 = ns.StringToNumbersAndSpaces_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 
     @Test
@@ -286,7 +286,7 @@ public class HW10_2Test {
         String actualResult_V1 = ns.StringToNumbersAndSpaces_V1(str);
         String actualResult_V2 = ns.StringToNumbersAndSpaces_V2(str);
 
-        Assert.assertEquals(expectedResult, actualResult_V1);
-        Assert.assertEquals(expectedResult, actualResult_V2);
+        Assert.assertEquals(actualResult_V1, expectedResult);
+        Assert.assertEquals(actualResult_V2, expectedResult);
     }
 }
