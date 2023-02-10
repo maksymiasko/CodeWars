@@ -20,6 +20,7 @@ public class StringHWTest {
     public static final String EXPECTED_STRING3 = "1 2 3 4 5 10      ";
     public static final String EXPECTED_STRING4 = "AAAA";
     public static final String EXPECTED_STRING5 = "5, 22";
+    public static final String EXPECTED_STRING6 = "33, 61";
     public static final String EXPECTED_ABC_STRING = "abc";
     public static final int EXPECTED_LENGTH = 19;
     public static final String EXPECTED_ABC_REPEAT_STRING = "abc, abc, abc, abc, abc";
@@ -107,7 +108,8 @@ public class StringHWTest {
 
     @Test
     public void integerLocationTest() {
-        Assert.assertEquals (EXPECTED_STRING5, StringHW.integerLocation(TEST_STRING2, 4));
+        Assert.assertEquals(EXPECTED_STRING5, StringHW.integerLocation(TEST_STRING2, 4));
+        Assert.assertEquals(EXPECTED_STRING6, StringHW.integerLocation(TEST_STRING10, 1));
         Assert.assertEquals(StringHW.integerLocation(TEST_STRING, 4), Integer.toString(10));
         Assert.assertEquals(StringHW.integerLocation(EXPECTED_STRING3, 3), Integer.toString(5));
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.integerLocation(TEST_EMPTY_STRING, 3));
