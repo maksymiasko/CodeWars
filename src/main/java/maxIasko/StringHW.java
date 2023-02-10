@@ -160,18 +160,18 @@ public class StringHW {
     //  7. Написать метод, который принимает строку и натуральное число, меньше 10,
     //  и возвращает порядковые номера (не индексы!) цифр, совпадающих с числом-параметром.
     //  “23, 45 2 1 567, а, 3 4 : 78”, 4 → 5, 22
-    public static int integerLocation(String s, int n) {
-        if (s == null || s.length() == 0 || n < 0 || n > 10) return -1;
+    public static String integerLocation(String s, int n) {
+        if (s == null || s.length() == 0 || n < 0 || n > 10) return "";
         char[] charArray = s.toCharArray();
-        int result = 0;
+        StringBuilder builder = new StringBuilder();
 
         for (int i = 0; i < charArray.length; i++) {
             if (Character.getNumericValue(charArray[i]) == n) {
-                result = i + 1;
+                builder.append(i + 1).append(", ");
             }
         }
 
-        return result;
+        return builder.deleteCharAt(builder.length() - 2).toString().stripTrailing();
     }
 }
 
