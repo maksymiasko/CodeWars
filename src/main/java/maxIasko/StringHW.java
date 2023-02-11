@@ -135,8 +135,9 @@ public class StringHW {
     public static String digitsAndLetters(String s) {
         if (s == null || s.length() == 0) return "";
 
-        char[] d = sortString(s.replaceAll("[^13579]", ""));
+        char[] d = sortString(s.replaceAll("[^2468]", ""));
         char[] l = sortString(s.replaceAll("[^A-Za-zА-Яа-яА-Яа-я]", ""));
+
         StringBuilder builder = new StringBuilder();
 
         if (d.length >= 5 && l.length >= 5) {
@@ -173,6 +174,27 @@ public class StringHW {
 
         return builder.deleteCharAt(builder.length() - 2).toString().stripTrailing();
     }
+
+    //  8.	Написать метод, который возвращает строку из букв, которые стоят на третьей, шестой, девятой, и так далее,
+    //  позициях (порядковые номера букв) в слове-параметре.
+    public static String letterAtPosition(String s) {
+        if (s == null || s.length() == 0) return "";
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 2; i < s.length(); i += 3) {
+            builder.append(s.charAt(i));
+        }
+
+        return builder.toString();
+    }
+
+    //  10.	Написать метод, который генерирует валидный пароль, который соответствует правилам:
+    //    - длина пароля от 8 до 64 символов
+    //    - пароль должен состоять из букв, цифр и символов
+    //    - допускается использование символов  !@#$%&*
+    //    - в пароле должна быть как минимум одна заглавная буква, одна строчная буква, одна цифра и один символ
+    //    Придумать тест кейсы на проверку сгенерированного пароля на валидность. Написать тесты
+
 }
 
 

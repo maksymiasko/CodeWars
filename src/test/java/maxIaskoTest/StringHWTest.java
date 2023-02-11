@@ -30,8 +30,8 @@ public class StringHWTest {
     public static final String TEST_STRING7 = "0123456789";
     public static final String TEST_STRING8 = "3, 2, 3, 4, 5 6, 7 8, 9+  1, 8, 2, 1";
     public static final String TEST_STRING9 = "B, c, D, A, a, J, k, i, D, F, e, r, Z";
-    public static final String TEST_STRING10 = "єїАыгрщсоцслфчПГЛstrAing6385795318@%# +_апшЇЄ,$%^&*ToNumbers1 ";
-    public static final String TEST_STRING11 = "1A1N3T3b5e";
+    public static final String TEST_STRING10 = "єїАыгрщсоцслфчПГЛstrAing6385795318@%# +_апшЇЄ,$%^&*ToNumbers124 ";
+    public static final String TEST_STRING11 = "2A4N6T8b8e";
 
     @Test
     public void stringToNumbersTest1() {
@@ -113,5 +113,12 @@ public class StringHWTest {
         Assert.assertEquals(StringHW.integerLocation(TEST_STRING, 4), Integer.toString(10));
         Assert.assertEquals(StringHW.integerLocation(EXPECTED_STRING3, 3), Integer.toString(5));
         Assert.assertEquals(TEST_EMPTY_STRING, StringHW.integerLocation(TEST_EMPTY_STRING, 3));
+    }
+
+    @Test
+    public void letterAtPositionTest() {
+        Assert.assertEquals("258", StringHW.letterAtPosition(TEST_STRING7));
+        Assert.assertEquals("АролПsAg891%+пЄ%*Nbs4", StringHW.letterAtPosition(TEST_STRING10));
+        Assert.assertEquals(TEST_EMPTY_STRING, StringHW.letterAtPosition(TEST_EMPTY_STRING));
     }
 }
