@@ -17,8 +17,6 @@ public class StringHW10_5Test {
 
         String actualResult = new StringHW10_5().getLast3First3(str);
 
-        System.out.println("act: " + actualResult);
-
         Assert.assertEquals(actualResult, expectedResult);
     }
 
@@ -30,8 +28,6 @@ public class StringHW10_5Test {
 
         String actualResult = new StringHW10_5().getLast3First3(str);
 
-        System.out.println("act: " + actualResult);
-
         Assert.assertEquals(actualResult, expectedResult);
     }
 
@@ -42,8 +38,6 @@ public class StringHW10_5Test {
         String expectedResult = "11111";
 
         String actualResult = new StringHW10_5().getLast3First3(str);
-
-        System.out.println("act: " + actualResult);
 
         Assert.assertEquals(actualResult, expectedResult);
     }
@@ -63,7 +57,7 @@ public class StringHW10_5Test {
     @Test
     public void test_nullString_Negative() {
         String str = "";
-        String expectedResult = "String is null or empty or blank";
+        String expectedResult = "String is null or empty";
 
         String actualResult = new StringHW10_5().getLast3First3(str);
 
@@ -74,7 +68,7 @@ public class StringHW10_5Test {
     @Test
     public void test_emptyString_Negative() {
         String str = "";
-        String expectedResult = "String is null or empty or blank";
+        String expectedResult = "String is null or empty";
 
         String actualResult = new StringHW10_5().getLast3First3(str);
 
